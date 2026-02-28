@@ -1,4 +1,4 @@
-package com.pge.ecommerce.accounts.interfaces;
+package com.pge.ecommerce.accounts.interfaces.rest;
 
 import com.pge.ecommerce.accounts.application.dto.LoginRequest;
 import com.pge.ecommerce.accounts.application.dto.LoginResponse;
