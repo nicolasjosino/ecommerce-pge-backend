@@ -30,7 +30,7 @@ public class AccountService {
 
     public LoginResponse login(LoginRequest request) {
         Account account = accountRepository.findByEmail(request.email())
-                .orElseThrow(() -> new IllegalArgumentException("Credenciais inválidas."));
+                .orElseThrow(() -> new IllegalArgumentException("Usuário não encontrado."));
 
 
         if (!passwordEncoder.matches(request.password(), account.getPasswordHash())) {

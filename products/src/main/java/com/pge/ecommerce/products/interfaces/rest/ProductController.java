@@ -14,7 +14,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/api/products")
-@RequiredArgsConstructor /// TODO: Testar necessidade
+@RequiredArgsConstructor
 class ProductController {
     private final ProductService productService;
 
