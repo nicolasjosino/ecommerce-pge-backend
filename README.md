@@ -16,6 +16,16 @@ Backend de e-commerce construído com arquitetura de microsserviços em Spring B
 
 ## Como Subir o Projeto
 
+### Requisitos de Ambiente
+  
+Para executar este projeto, você precisará ter instalado em seu ambiente:
+- Java 21 ou superior
+- Maven 3.9 ou superior
+
+Certifique-se de que as variáveis de ambiente estão configuradas corretamente antes de executar o projeto.
+
+---
+
 Cada serviço deve ser subido individualmente e na ordem abaixo, para o registro e disponibilização corretos de cada microsserviço no Eureka Server, e para que o API Gateway consuma corretamente o mesmo:
 
 1. eureka-service
@@ -24,9 +34,26 @@ Cada serviço deve ser subido individualmente e na ordem abaixo, para o registro
 4. sales
 5. api-gateway
 
-Para executar cada aplicação, acesse a pasta raiz e execute o comando:
+Para executar cada aplicação, abra um terminal separado, e execute os seguintes comandos na pasta raiz do projeto:
 
+``` bash
+cd eureka-service
+./mvnw spring-boot:run
 ```
+``` bash
+cd accounts
+./mvnw spring-boot:run
+```
+``` bash
+cd products
+./mvnw spring-boot:run
+```
+``` bash
+cd sales
+./mvnw spring-boot:run
+```
+``` bash
+cd api-gateway
 ./mvnw spring-boot:run
 ```
 
